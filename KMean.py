@@ -3,8 +3,6 @@ import numpy as np
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as mp
 from pylab import show
-from sklearn.model_selection import cross_val_predict
-from sklearn.model_selection import cross_val_score
 
 # Load data. csv file should be in the same folder as the notebook for this to work, otherwise
 # give data path.
@@ -36,6 +34,7 @@ mp.title("Figure 5.1 Inertia vs K-means value from 2 to 20")
 mp.plot(n_clusters, inertia)
 mp.show()
 
+# Plotting figure with max_iter and n_init = 1
 n_clusters = list(range(2,21))
 inertia = []
 for i in (n_clusters):
@@ -47,7 +46,7 @@ mp.title("Figure 5.2 Inertia vs K-means with n_init and max_iter = 1")
 mp.plot(n_clusters, inertia)
 mp.show()
 
-
+# Plotting figure n_iter vs n_cluster with default parameters
 n_clusters = list(range(2,21))
 n_iter = []
 for i in (n_clusters):
